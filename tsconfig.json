@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", //Compile to modern JavaScript
+    "module": "node16", //Use Node's module system
+    "lib": ["ES2020", "DOM"], //Include modern JS + browser types
+    "strict": true, //Enable all strict type-checking options
+    "moduleResolution": "node16", //Use Node's module resolution
+    "esModuleInterop": true, //Clean import syntax for all packages
+    "skipLibCheck": true, //Skip type checking of declaration files
+    "noEmit": true, //Don't output compiled files
+        "types": ["node", "@playwright/test"] //Load only the types we need
+  },
+    "include": ["tests/**/*.ts"], //Include all TypeScript files in the tests directory
+    "exclude": ["node_modules"] //Ignore installed packages
+}
