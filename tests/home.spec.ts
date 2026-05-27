@@ -1,9 +1,7 @@
-import { test, expect } from '@playwright/test';
-import { HomePage } from './pages/HomePage';
+import { test, expect } from './fixtures/base';
 
 test.describe('Home page', () => {
-    test('should load the home page successfully', async ({ page }) => {
-        const homePage = new HomePage(page);
+    test('should load the home page successfully', async ({ homePage, page }) => {
         await homePage.navigate();
         await expect(page).toHaveTitle(/Conduit/);
         await expect(page).toHaveURL('https://conduit.mate.academy/');
@@ -11,4 +9,4 @@ test.describe('Home page', () => {
         await expect(homePage.signInLink).toBeVisible();
         await expect(homePage.logo).toBeVisible();
     });
-});
+    });
