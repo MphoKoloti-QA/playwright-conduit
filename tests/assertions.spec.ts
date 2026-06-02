@@ -24,11 +24,11 @@ test.describe('Assertions', () => {
         const articles = page.locator('.article-preview');
         await expect(articles.first()).toBeVisible();
         expect(await articles.count()).toBeGreaterThan(0);
-        const tagLists = page.locator('.tag-list');
-        await expect(tagLists.first()).toBeVisible();
-        expect(await tagLists.count()).toBeGreaterThan(0);
+        const tagList = page.locator('.tag-list .tag-default');
+        await expect(tagList.first()).toBeVisible();
+        expect(await tagList.count()).toBeGreaterThan(0);
         await expect(homePage.signInLink).toBeEnabled();
         const count = await articles.count();
-        console.log('number of articles: ${count}');
+        console.log(`number of articles: ${count}`);
     });
 });
