@@ -48,3 +48,10 @@ npx playwright test login.spec.ts
 ```bash
 npx playwright show-report
 ```
+
+## All three commands one after another. Paste back the confirmation and Day 3 is officially closed
+```bash
+git add .
+git commit -m "Comments on every push"
+git push
+```
