@@ -8,8 +8,9 @@
     "esModuleInterop": true, //Clean import syntax for all packages
     "skipLibCheck": true, //Skip type checking of declaration files
     "noEmit": true, //Don't output compiled files
+    "resolveJsonModule":true,
         "types": ["node", "@playwright/test"] //Load only the types we need
   },
-    "include": ["tests/**/*.ts"], //Include all TypeScript files in the tests directory
+    "include": ["tests/**/*.ts", "tests/**/*.json"], //Include all TypeScript and JSON files in the tests directory
     "exclude": ["node_modules"] //Ignore installed packages
 }

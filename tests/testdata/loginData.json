@@ -1,0 +1,26 @@
+[
+    {
+        "description": "invalid email and password",
+        "email": "wrong@email.com",
+        "password": "wrongpassword",
+        "expectedError": true
+    },
+    {
+        "description": "valid email and password",
+        "email": "corbin@yahoo.com",
+        "password": "wrongpassword",
+        "expectedError": true
+    },
+    {
+        "description": "empty email field",
+        "email": "",
+        "password": "somepassword",
+        "expectedError": true
+    },
+    {
+        "description": "empty password field",
+        "email": "corbin@yahoo.com",
+        "password": "",
+        "expectedError": true
+    }
+]
