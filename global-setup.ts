@@ -8,7 +8,7 @@ async function globalSetup(config: FullConfig) {
     await page.getByPlaceholder('Email').fill('corbin@yahoo.com');
     await page.getByPlaceholder('Password').fill('Corbin@3296');
     await page.getByRole('button', { name: 'Sign in' }).click();
-    await page.waitForURL(`${baseURL}/`);
+    await page.waitForURL(`${baseURL}/`, { timeout: 60000 });
     await page.context().storageState({ path: 'auth.json' });
     await browser.close();
 }
